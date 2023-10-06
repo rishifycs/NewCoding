@@ -1,0 +1,2110 @@
+				------------Practical No. 1------------
+
+Q1) Write a java program to print “Hello World!!!”.
+
+public class P1Q1
+{
+	public static void main(String [] args)
+	{
+		System.out.println("Hello World");
+	}
+}
+
+
+Q2) Write a java program for Addition , Subtraction , Division & Multiplication of 2 numbers
+
+import java.util.Scanner;
+public class P1Q2
+{
+public static void main(String [] args)
+{
+	Scanner s1 = new Scanner(System.in);
+	System.out.println("Enter Number");
+	int num1 = s1.nextInt();
+	int num2 = s1.nextInt();
+System.out.println("Addition:" +(num1+num2));
+System.out.println("subtraction:" +(num1-num2));
+System.out.println("Divsion:" +(num1/num2));
+System.out.println("Multiplication:" +(num1*num2));
+}
+}
+
+
+Q3) Write a java program to display square & cube of any number.
+
+
+import java.util.Scanner;
+public class P1Q3
+{
+public static int sqrt(int x)
+{
+return x*x;
+}
+public static int cube(int x)
+{
+return x*x*x;
+}
+public static void main(String[] args)
+{
+Scanner s1 = new Scanner(System.in);
+System.out.println("Enter Number");
+int x = s1.nextInt();
+int y = sqrt(x);
+int z = cube(x);
+System.out.println("Square of Number:"+y);
+System.out.println("Cube of Number:"+z);
+}
+}
+
+Q4) Write a java program to input roll no , name & marks of 3 subject & calculate total marks & average marks of student.
+
+
+ import java.util.Scanner;
+public class P1Q4
+{
+public static void main(String[]args)
+{
+  int id;
+  char name;
+  float a,b,c;
+  Scanner sc = new Scanner(System.in);
+  System.out.println("Enter Student ID: ");
+  id=sc.nextInt();
+  System.out.println("Enter Student Name: ");
+  name=sc.next().charAt(0);
+  System.out.println("Enter Your Marks scored in Maths, English, Science\n");
+  a=sc.nextFloat();
+  b=sc.nextFloat();
+  c=sc.nextFloat();
+  float total=(a+b+c);
+  float avg=total/3;
+  System.out.println("Total marks of Student = "+total);
+  System.out.println("Average Marks of Student is  = "+avg);
+}
+}
+
+
+Q5) Write a java program input radius of circle & calculate area of circle & circumference of circle
+
+
+import java.util.Scanner;
+public class P1Q5
+{
+public static double area(int x)
+{
+return 3.14*x*x;
+}
+public static double circum(int x)
+{
+return 2*3.14*x;
+}
+public static void main(String [] args)
+{
+Scanner s1 = new Scanner(System.in);
+System.out.println("Enter Radius");
+int r =s1.nextInt();
+double x =area(r);
+double y=circum(r);
+System.out.println("Area of Circle:"+x);
+System.out.println("Circumference of Circle:"+y);
+}
+}
+
+
+Q6) Write a java program to calculate area of room using multiple classes.
+
+
+import java.util.Scanner;
+public class P1Q6
+{
+	public static void main (String[] args)
+	{
+	Scanner sc = new Scanner(System.in);
+	System.out.println("Enter the length of Rectangle:");
+	Double length = sc.nextDouble();
+	System.out.println("Enter the breath of Rectangle:");
+	Double breath = sc.nextDouble();
+	Double area = length*breath;
+	System.out.println("Area of Room is:"+area);
+	}
+}
+
+
+Q7) Write a java program to accept principle amount no. of years , Rate of interest from user & calculate Simple Interest.
+
+
+import java.util.Scanner;
+public class P1Q7 
+{
+	public static void main(String[] args) 
+{
+Scanner s1 = new Scanner(System.in);
+System.out.println("Enter amount:");
+float p= s1.nextFloat();
+System.out.println("Enter Time:");
+int t=s1.nextInt();
+System.out.println("Enter Rate:");
+int r= s1.nextInt();
+double s= (p*t*r)/100;
+System.out.println("Simple Interest:"+s);
+}
+}
+
+Q8) Write a java program to swap any 2 numbers without using third variable. 
+
+
+import java.util.Scanner;
+public class P1Q8
+{
+public static void main(String[] args) 
+{
+Scanner s1= new Scanner(System.in);
+System.out.println("Enter value of x & y:");
+int x= s1.nextInt();
+int y= s1.nextInt();
+System.out.println("Before swap x="+x);
+System.out.println("Before swap y="+y);
+x=x+y;
+y=x-y;
+x=x-y;
+System.out.println("After Swap x="+x);
+System.out.println("After Swap y="+y);
+}
+}
+
+
+Q9) Write a java program to find reverse of 4 digit number & also prints it’s sum of all digits.
+
+
+import java.util.Scanner;
+public class P1Q9
+{
+public static void main(String[]args)
+{
+  int n , a , m = 0 , sum = 0;
+  Scanner scan = new Scanner(System.in);
+  System.out.println("Enter 4 Digit Number=");
+  n=scan.nextInt();
+  do 
+ {
+   a=n%10;
+   m=m*10+a;
+   sum=sum+a;
+   n=n/10;
+ }
+while(n>0);
+System.out.println("reverse:"+m);
+System.out.println("sum:"+sum);
+}
+}
+
+				-----------PRACTICAL 2----------
+
+Q1)  Define a class box with member integer length , height and width
+i.Write display method which will display data with values.
+ii.Write area method which will return the area of base of box. 
+iii.Write volume method which will return the volume of box.
+
+
+import java.util.Scanner;
+class Box
+{ 
+	public int l, b, h;
+	public int side;
+	public void getdisplay()
+	{
+		System.out.println("Enter the length, breadth, height and side : ");
+		Scanner sc=new Scanner(System.in);
+		l=sc.nextInt();
+		b=sc.nextInt();
+		h=sc.nextInt();
+		side=sc.nextInt();
+		System.out.println("Length of Box : " +l);
+		System.out.println("Breadth of Box : " +b);
+		System.out.println("Height of Box : " +h);
+		System.out.println("Side of Box : " +side);
+	}
+	public void getVolume()
+	{
+		System.out.println("Volume of Box : " +l*b*h);
+	}
+	public void getSquare()
+	{
+		System.out.println("Area of square : " +side*side);
+	}
+}
+public class P2Q1
+{
+	public static void main(String[] args)
+	{
+		Box b1 = new Box();
+		b1.getdisplay();
+		b1.getVolume();
+		b1.getSquare();
+	}
+}
+
+
+Q2) Design a class to represent bank account which includes data members ac_no , name_of_ac_holder , type_of_ac , bal_amt and write the method as 
+i.To give initial values
+ii.To deposit an amount
+iii.To withdraw an amount
+
+
+import java.util.Scanner;
+class Bank
+{
+	int ac_no;
+	String name_of_ac_holder;
+	String type_of_ac;
+	int bal_amt;
+	int x,y,z;
+	public void show()
+	{
+		Scanner s = new Scanner(System.in);
+		System.out.println("Enter Your Account Number : ");
+		ac_no=s.nextInt();
+		System.out.println("Enter Your Name : ");
+		name_of_ac_holder=s.next();
+		System.out.println("Enter The Type Of Account : ");
+		type_of_ac=s.next();
+	}
+	public void Depo()
+	{
+		Scanner s = new Scanner(System.in);
+		System.out.println("Enter The Present Balance In Your  Account : ");
+		bal_amt=s.nextInt();
+		System.out.println("Enter The Amount To Be Deposited : ");
+		x=s.nextInt();
+		z=x+bal_amt;
+		System.out.println("Your Balance Account After Depositing : " +z);
+	}
+	public void Withd()
+	{
+		Scanner s=new Scanner(System.in);
+		System.out.println("Enter The Amount To be WithDrawn : ");
+		y=s.nextInt();
+		System.out.println("Your Balance Amount After WithDrawn : " +(z-y));
+	}
+}
+public class P2Q2
+{ 
+	public static void main(String[] args)
+	{
+		Bank o1=new Bank();
+		o1.show();
+		o1.Depo();
+		o1.Withd();
+	}
+}
+
+
+Q3) Design a class to employee and include the following members :
+i.Emp_no , name , contact no , dept
+ii.Write a method to provide initial values.
+iii.Write a method to display the details of employee .
+
+
+import java.util.Scanner;
+class Detail
+{ 
+	public int Empno, ContactNo;
+	public String Name, Department;
+	public void EmpInfo()
+	{
+		Scanner s1=new Scanner(System.in);
+		System.out.println("Enter the Employee Number = ");
+		Empno=s1.nextInt();
+		System.out.println("Enter the Name = ");
+		Name=s1.next();
+		System.out.println("Enter the Contact Number = ");
+		ContactNo=s1.nextInt();
+		System.out.println("Enter the Department = ");
+		Department=s1.next();
+	}
+	public void EmpData()
+	{
+		System.out.println("The Employee Number is " +Empno);
+		System.out.println("The Employee Name is " +Name);
+		System.out.println("The Contact Number is "+ContactNo);
+		System.out.println("The Department is " +Department);
+	}
+}
+public class P2Q3
+{
+	public static void main(String[] args)
+	{
+		Detail d1 = new Detail();
+		d1.EmpInfo();
+		d1.EmpData();
+	}
+}
+
+
+Q4) Design a class product with fields prodId,ProdName,ProdPrice,Quantity :
+i.Write a method to provide initial values to the fields.
+ii.Write a method to display the details of product .
+iii.Write a method to display the bill amount along with details of product
+
+import java.util.Scanner;
+class Product
+{ 
+	int ProdId;
+	String ProdName;
+	int ProdPrice;
+	int Quantity;
+	int Total;
+	public void getInfo()
+	{
+		Scanner s1=new Scanner(System.in);
+		System.out.println("Enter the Product ID : ");
+		ProdId=s1.nextInt();
+		System.out.println("Enter the Product name : ");
+		ProdName=s1.next();
+		System.out.println("Enter the Price of the product : ");
+		ProdPrice=s1.nextInt();
+		System.out.println("Enter the Quantity : ");
+		Quantity=s1.nextInt();
+	}
+	public void showdata()
+	{
+		System.out.println("Id of the purchased product is " +ProdId);
+		System.out.println("Name of Purchased product is " +ProdName);
+		System.out.println("Price of the Purchased product is " +ProdPrice);
+		System.out.println("Quantity of the Purchased product is " +Quantity);
+	}
+	public void bill()
+	{
+		Total=ProdPrice*Quantity;
+		showdata();
+		System.out.println("Total amount of the product is " +Total);
+	}
+}
+public class P2Q4
+{
+	public static void main(String[] args)
+	{
+		Product o1 = new Product();
+		o1.getInfo();
+		o1.bill();
+	}
+}
+
+
+Q5) Design a class Student with fields studName, studId, Marks in 3 subjects :
+i.Write a method to provide initial values to the fields.
+ii.Write a method to display the details of Student .
+iii.Write a method to display the average marks along with details of student.
+iv.Write a method to display the result (refer below table)of student  along with details 
+
+
+import java.util.Scanner;
+class Student
+{
+	String studName;
+	int studId;
+	int sub1, sub2, sub3;
+	int total;
+	double average;
+	public void getInfo()
+	{
+		Scanner s=new Scanner(System.in);
+		System.out.println("Enter Student Name : ");
+		studName=s.next();
+		System.out.println("Enter Student ID : ");
+		studId=s.nextInt();
+		System.out.println("Enter Marks of Subject 1 : ");
+		sub1=s.nextInt();
+		System.out.println("Enter Marks of Subject 2 : ");
+		sub2=s.nextInt();
+		System.out.println("Enter Marks of Subject 3 : ");
+		sub3=s.nextInt();
+	}
+	public void showInfo()
+	{
+		System.out.println("Name of Student is : " +studName);
+		System.out.println("Id of the Student is : " +studId);
+		System.out.println("Marks Scored in Subject 1 : "+sub1);
+		System.out.println("Marks Scored in Subject 2 : "+sub2);
+		System.out.println("Marks Scored in Subject 3 : "+sub3);
+	}
+	public void average()
+	{
+		total=sub1+sub2+sub3;
+		average=(double)total/3;
+		showInfo();
+		System.out.println("Average Marks of the Student is : " +average);
+	}
+	public void res()
+	{
+		if(average>80)
+		{ 
+			System.out.println("Result is O Grade");
+		}
+		if(80>average && average>70)
+		{ 
+			System.out.println("Result is A Grade");
+		}
+		if(70>average && average>60)
+		{
+			 System.out.println("Result is B Grade");
+		}
+		if(60>average && average>40)
+		{ 
+			System.out.println("Result is C Grade");
+		}
+		if(average<40)
+		{ 
+			System.out.println("Result is Failed");
+		}
+	}
+}
+public class P2Q5
+{
+	public static void main(String[] args)
+	{
+		Student o1=new Student();
+		o1.getInfo();
+		o1.average();
+		o1.res();
+	}
+}
+
+
+Q6) Design a class ComplexNumber with fields real and imaginary and write methods 
+i.To give initial values to members
+ii.To display complex number
+iii.To display addition of two complex numbers
+iv.To display subtraction of two complex numbers
+
+import java.util.Scanner;
+class Complex {
+	int real;
+	int img;
+	Complex() 
+	{
+		real=0;
+		img=0;
+	}
+	Complex(int r, int i)
+	{
+		real = r;
+		img= i;
+	}
+	public Complex addZ(Complex c1, Complex c2)
+	{
+		Complex sum = new Complex();
+		sum.real = c1.real + c2.real;
+		sum.img = c1.img + c2.img;
+		return sum;
+	}
+	public Complex subZ(Complex c1, Complex c2)
+	{
+		Complex sub = new Complex();
+		sub.real = c1.real - c2.real;
+		sub.img = c1.img - c2.img;
+		return sub;
+	}
+   public void displayadd()
+   {
+   	System.out.println("Addition of complex number : "+ real + " + "+ img+"i");
+   }
+   public void displaysub()
+   {
+   	System.out.println("Subtraction of complex number : "+ real + " - "+ img+"i");
+   }
+  
+}
+public class P2Q6
+ {
+	public static void main(String[] args)
+	{
+		Scanner s1= new Scanner(System.in);
+		System.out.println("Enter complex 1:");
+		int a=s1.nextInt();
+		int b= s1.nextInt();
+		System.out.println("Enter complex 2:");
+		int x=s1.nextInt();
+		int y=s1.nextInt();
+		Complex c1 = new Complex(a, b);
+		Complex c2 = new Complex(x, y);
+		Complex c3 = new Complex();
+		Complex c4= new Complex();
+		c3 = c3.addZ(c1, c2);
+		c4=c4.subZ(c1,c2);
+		c3.displayadd();
+		c4.displaysub();
+	}
+}
+
+
+Q7) Write a program to create a class TelephoneBill  having the following methods and print the final bill amount.
+i.'getInfo()' which takes the telephone number and the no. of calls made in a month as parameter.
+ii.displayBill() which Calculate and display the bill amount with a fixed rent of Rs. 400. The first 150 calls are free while excess calls are charged at 80 paise each
+
+
+import java.util.Scanner;
+class TelephoneBill
+{ 
+	private long tel_no,no_of_calls;
+	Scanner sc=new Scanner(System.in);
+	
+	public void getInfo()
+	{
+		System.out.println("Enter your Telephone No. & No. of calls made in a month ");
+		tel_no = sc.nextLong();
+		no_of_calls = sc.nextInt();
+	}
+	public void displayBill()
+	{
+		if(no_of_calls>150)
+		{
+			System.out.println("The Billing amount is" + (400+(no_of_calls - 150)*0.8) + "Rs");
+		}
+		else
+		{
+			System.out.println("The Billing amount is 400");
+		}
+	}
+}
+public class P2Q7
+{
+	public static void main(String[] args)
+	{
+		Scanner input=new Scanner(System.in);
+		
+		TelephoneBill t1 = new TelephoneBill();
+		t1.getInfo();
+		t1.displayBill();
+	}
+}
+
+
+				-----------PRACTICAL 3 -----------
+
+Q1) Create a class method overload. Now create two methods of same name square but with different parameters
+
+
+class method_overload
+{
+   	public void square(double num)
+   	{
+       		System.out.println("Square of a number: "+ num + " is"  +(num*num));
+   	}
+   	public void square(float num2)
+  	 {
+      		 System.out.println("Square of a number: "+ num2 + " is"  +(num2*num2) );
+  	 }
+}
+public class P3Q1
+{
+   	public static void main(String args[])
+   	{
+      		method_overload obj = new method_overload();
+     		  obj.square(3);
+      		 obj.square(10.2);
+	}
+}
+
+
+Q2) Define a class overload which overload a method add( ) as integer add(int x , int y ) & add( int x , int y , int z ) which will return x + y  &  a + b + c  resp.
+
+
+class Overload
+{
+	public void add(int x, int y)
+	{
+		System.out.println("Addition of "+ x + " and "+y+" is "+(x+y));
+	}
+	public void add(int a, int b, int c)
+	{
+		System.out.println("Addition of "+ a +","+ b +" and "+ c +" is "+(a+b+c));	
+	}
+}
+public class P3Q2
+{
+	public static void main(String args[])
+	{
+		Overload o1 = new Overload();
+		o1.add(5,5);
+		o1.add(5,5,5);
+	}
+}
+
+
+Q3) Write a java program to define following classes. Class A having three overloading methods. First method accepts no parameters. Second method accepts one string. Third method accepts one string and an integer. These methods displays following messages. msg 1: "Rose is beautiful flower once".(1st method) msg 2: "Sunflower is beautiful flower twice".(2nd method) msg 3: Marigold is beautiful flower n number of times where n is passed as an integer value to the 3rd method. Write another class having main method to invoke above method.
+
+
+class Overload_Flr
+{
+	String flower;
+	int num;
+	public void Show_Flr()
+	{
+		System.out.println("Rose is beautiful flower");
+	}
+	public void Show_Flr(String flower)
+	{
+		System.out.println(flower+ " is beautiful flower");
+		System.out.println(flower+ " is beautiful flower");
+	}
+	public void Show_Flr(String flower, int num)
+	{
+		for(int i=1; i<=num; i++)
+		{
+		System.out.println(flower+ " is beautiful flower");
+		}
+	}
+}
+
+public class P3Q3
+{
+	public static void main(String args[])
+	{
+            	Overload_Flr o1 = new Overload_Flr();
+		o1.Show_Flr();
+		o1.Show_Flr("Sunflower");
+		o1.Show_Flr("Marigold",3);
+	}
+}
+
+
+Q4) Create a class called Interest with variables p and r, they being the principal and rate of interest respectively. The class defines a method to which the simple interest for a year, this method to be overloaded to find the compound interest for an amount invested for n number of years. Class Action creates two instances(objects) of the above class one to find the simple interest and the other to find the compound interest containing main() and display the respective interests using your own data
+
+
+class Interest
+{
+	double p,r,n;
+	public void IntCal()
+	{
+		System.out.println("\nP = Principal \nR = Rate of interest \nN =No of Years");
+	}
+	public void IntCal(double p, double r)
+	{
+		System.out.println("Simple Interest = "+((p*r*1)/100));
+	}
+	public void IntCal(double p, double r, double n)
+	{
+		System.out.println("Compound Interest = "+(p*(1+r/100*n)-p));
+	}
+}
+public class P3Q4
+{
+	public static void main(String args[])
+	{
+		Interest i1 = new Interest();
+		i1.IntCal(1000,2);
+		i1.IntCal(4000,3,2);
+	}
+}
+
+
+Q5) Create a class called Area with variables h and b they being the breadth and height of quadrilateral and the class defines a method. i) to find area of square. This method is to be overloaded to find area of rectangle. Class Action creates two instances or objects of the above class, one to find area of square and other to find area of rectangle containing main() method and display respective area using own data
+
+
+class AreaOver
+{
+	int l,b,h;
+	public void Display(int l)
+	{
+		System.out.println("Area of Square is = "+l*l);
+	}
+	public void Display(int l, int b, int h)
+	{
+		System.out.println("Area of Rectangle is = "+(l*b*h));
+	}
+}
+public class P3Q5
+{
+	public static void main(String args[])
+	{
+		AreaOver a1 = new AreaOver();
+		a1.Display(10);
+		a1.Display(10,10,10);
+	}
+}
+
+
+				-----------PRACTICAL 4 ------------
+
+1.Write a program to demonstrate single inheritance
+
+class Parent 
+{
+	public void get1()
+	{
+	System.out.println("This is super class");
+	}
+}
+
+class Child extends Parent
+{
+	public void get2()
+	{
+	System.out.println("This is Sub or Derived class");
+	}
+}
+
+class P4Q1
+{
+	public static void main(String [] args)
+	{
+	Child c=new Child();
+	c.get1();
+	c.get2();
+	}
+}
+
+
+2.Write a program to implement multilevel inheritance (Person-Employee -Manager / Goods-Food-jam).
+
+class Person 
+{
+	public void getPerson(String name, int age)
+	{
+	System.out.println("The Name of Person is "+name);
+	System.out.println("The Age of Person is "+age);	
+	}
+}
+
+class Employee extends Person
+{
+	public void getEmployee(int exp, int salary)
+	{
+	System.out.println("The Experience of Employee is "+exp+ " Years");
+	System.out.println("The Experience of Employee is "+salary);
+	}
+}
+
+class Manager extends Employee
+{
+
+	public void getManager(String Post)
+	{
+	System.out.println("The Post of Employee is "+Post);
+	}
+}
+
+class P4Q2
+{
+	public static void main(String [] args)
+	{
+	Manager m = new Manager();
+	m.getPerson("Sahil",18);
+	m.getEmployee(2,50000);
+	m.getManager("Manager");
+	}
+}
+
+
+3.Design a base class person (name, address, phone-no). Derive a class employee (eno, ename) from a person. Derive a class manager (designation, department, basic-salary) from the employee. Display all the details of the manager
+
+
+class Person 
+{
+String name;
+int age;
+long P_no;
+	public void getPerson(String n, int a, long pn)
+	{
+	name = n;
+	age = a;
+	P_no = pn;
+	System.out.println("The Name of Person is "+name);
+	System.out.println("The Age of Person is "+age);
+	System.out.println("The Phone Number of Person is "+P_no);	
+	}
+}
+
+class Employee extends Person
+{
+	public void getEmployee()
+	{
+	System.out.println("The Name of Employee is "+name);
+	System.out.println("The Phone Number of Person is "+P_no);
+	}
+}
+
+class Manager extends Employee
+{
+String designation;
+String department;
+int basic_sal;
+	public void getManager(String des, String dept, int sal)
+	{
+	designation = des;
+	department = dept;
+	basic_sal = sal;
+	System.out.println("The Designation of Employee is "+designation);
+	System.out.println("The Department of Manager is "+department);
+	System.out.println("The Salary of Manager is "+basic_sal);
+	}
+}
+
+class P4Q3
+{
+	public static void main(String [] args)
+	{
+	Manager m = new Manager();
+	m.getPerson("Sahil",18,9867952577);
+	m.getEmployee();
+	m.getManager("Manager","CS",50000);
+	}
+}
+
+
+4.Write a program to demonstrate Hierarchical inheritance (Shape-Rectangle, Triangle, Circle).
+
+
+ class Shape
+{
+double radius;
+int length;
+int breath;
+int height;
+}
+
+class Rectangle extends Shape
+{
+	public void GetRec(int length, int breath)
+	{
+	System.out.println("The Length of Rectangle "+length);
+	System.out.println("The breath of Rectangle "+breath);
+	}
+}
+class Triangle extends Shape
+{
+	public void GetTri(int length, int breath, int height)
+	{
+	System.out.println("The Length of Triangle "+length);
+	System.out.println("The breath of Triangle "+breath);
+	System.out.println("The height of Triangle "+height);
+	}
+}
+class Circle extends Shape
+{
+	public void GetCir(double radius)
+	{
+	System.out.println("The Radius of Circle "+radius);
+	}
+}
+
+public class P4Q4
+{
+	public static void main(String [] args)
+	{
+	Rectangle r = new Rectangle();
+	Triangle t = new Triangle();
+	Circle c = new Circle();
+	r.GetRec(10,20);
+	t.GetTri(11,22,33);
+	c.GetCir(5.2);
+	}
+
+5.Define a class publication having data members as string title float price write a display function which will display the data.
+From this class derived two classes Book and Cd
+Book classes will add int pagecount as data member.
+Cd class will add float play time as data member.
+Override display function for both classes write constructor for all classes.
+
+
+class publication
+{
+	float Price;
+	String title;
+	publication(float Price, String title)
+	{
+		this.Price=Price;
+		this.title=title;
+	}
+	public void displaypub()
+	{
+		System.out.println("Title.of a Book  "+title);
+		System.out.println("price of a Book  "+Price);
+	}
+}
+class Book extends publication
+{
+	int pg;
+	Book(float p, String n , int pg)
+	{
+		super(p,n);
+		this.pg=pg;
+	}
+	public void displayBook()
+	{
+		System.out.println("no.of page :"+pg);
+	}
+}
+class CD extends publication
+{
+	float ptime;
+	CD(float p, String n , float ptime)
+	{
+		super(p,n);
+		this.ptime=ptime;
+	}
+	public void showCD()
+	{
+		System.out.println("PlayTime :"+ptime+" sec");
+	}
+}
+public class P4Q5
+{
+	public static void main(String[] args) 
+	{
+		Book b1= new Book(100,"Python3",200);
+		CD c1= new CD(100,"Python3", 400);
+		b1.displaypub();
+		b1.displayBook();
+		c1.showCD();
+	}
+}
+
+6.Design a base class staff (staffno, name, salary) and two derived classes as teaching staff (subject) and nonteaching staff (post). Write necessary member function to accept and display information of all staff members.
+
+
+class staff
+{
+	int staffno;
+	String name;
+	double sal;
+	staff(int sn, String n , double s)
+	{
+		staffno=sn;
+		name=n;
+		sal=s;
+	}
+	public void displaystaff()
+	{
+		System.out.println("Staff-no :"+staffno);
+		System.out.println("Name :"+name);
+		System.out.println("Salary :"+sal);
+	}
+}
+class teach_staff extends staff
+{
+	String sub;
+	teach_staff(int sn , String n , double s , String sub)
+	{
+		super(sn,n,s);
+		this.sub=sub;
+	}
+	public void displayts()
+	{
+		System.out.println("Subject :"+sub);
+	}
+}
+class teach_ns extends staff
+{
+	String post;
+	teach_ns(int sn , String n , double s , String p)
+	{
+		super(sn,n,s);
+		post=p;
+	}
+	public void displaytns()
+	{
+		System.out.println("Post :"+post);
+	}
+}
+public class  P4Q6
+{
+	public static void main(String[] args) 
+	{
+		teach_staff t1= new teach_staff(101,"pp",40000,"java");
+		teach_ns t2= new teach_ns(102,"abc",20000,"clerk");
+		t1.displaystaff();
+		t1.displayts();
+		System.out.println("\n");
+		t2.displaystaff();
+		t2.displaytns();
+	}
+}
+
+				---------------PRACTICAL 5 -----------------
+
+Q.1) Write a Program in Java to create an Interface animal, with methods eat () and 
+move (). Define a class Cat and Dog, which implements the animal Interface.
+Declare an interface called function that has a method named evaluate () that takes an arbitrary integer value as a parameter and returns an integer value
+
+
+interface Animal
+{
+	public void eat();
+	public void move();
+}
+class cat implements Animal
+{
+	public void eat()
+	{
+		System.out.println("eating.....!!");
+	}
+	public void move()
+	{
+		System.out.println("moving......!!");
+	}
+}
+class dog implements Animal
+{
+	public void eat()
+	{
+		System.out.println("(dog) eating....!!");
+	}
+	public void move()
+	{
+		System.out.println("(dog) moving......!!");
+	}
+}
+public class P5Q1
+{
+public static void main(String[] args) 
+{
+cat c1 = new cat();
+dog d1 = new dog();
+c1.eat();
+c1.move();
+d1.eat();
+d1.move();
+}
+}
+
+
+Q.2) Create a class Half that implements function. Make the implementation of method evaluate. Return the value obtained by dividing the integer value by 2. 
+Create a class Double that implements function. Make the implementation of method evaluate. Return the value obtained by multiplying the integer value by 2
+
+interface function
+{
+	public int evaluate(int n);
+}
+
+class Half implements function
+{
+	public int evaluate(int n)
+	{
+	int a = (n/2);
+	System.out.println("Half Value is "+a);
+	return a;
+	}
+}
+
+class Double implements function
+{
+	public int evaluate(int n)
+	{
+	int b = (n*2);
+	System.out.println("Multiplication Value is "+b);
+	return b;
+	}
+}
+
+public class P5Q2
+{
+	public static void main(String []args)
+	{
+		Half h = new Half();
+		Double d = new Double();
+		h.evaluate(2);
+		d.evaluate(2);
+	}
+}
+
+
+ Q.3) Define an interface Shape containing function area. Define two classes Triangle and Rectangle that implement Shape interface with proper code for calculation of area.
+
+
+interface Shape
+{
+	public void area(int d1, int d2);
+}
+
+class Rectangle implements Shape
+{
+	public void area(int l, int b)
+	{	
+		System.out.println("Area of Rectangle is "+ l*b);
+	}
+}
+
+class Triangle implements Shape
+{
+	public void area(int b, int h)
+	{	
+		System.out.println("Area of Triangle is "+ (b*h)/2);
+	}
+}
+
+public class P5Q3
+{
+	public static void main(String []args)
+	{
+		Rectangle h = new Rectangle();
+		Triangle d = new Triangle();
+		h.area(2,2);
+		d.area(2,2);
+	}
+}
+
+
+				-----------------PRACTICAL 6 ---------------
+
+1.Write a Java Program to input array of 10 elements & display:
+i.All even & odd number
+ii.Min & max
+
+import java.util.Scanner;
+
+class P6Q1
+{
+	public static void main(String []args)
+	{
+	int n;
+	Scanner sc = new Scanner(System.in);
+	n=10;
+	int arr[] = new int[n];
+
+	System.out.println("Enter the elements in array :");
+	for(int i = 0; i<n; i++)
+	{
+		arr[i] = sc.nextInt();
+	}
+	System.out.println("Odd Numbers");
+	for(int i = 0; i<n; i++)
+	{
+		if(arr[i]%2 !=0)
+		{
+			System.out.println(arr[i]+ " ");
+		}
+	}
+	System.out.println("Evan Numbers");
+	for(int i = 0; i<n; i++)
+	{
+		if(arr[i]%2 ==0)
+		{
+			System.out.println(arr[i]+ " ");
+		}
+	}
+		int max = arr[0];
+		for(int i = 0; i<arr.length; i++)
+	{
+		if (arr[i]>max)
+		max = arr[i];
+	}
+	{
+		System.out.println("Maximum number in array is "+ max);
+	}
+		int min = arr[0];
+		for(int i = 0; i<arr.length; i++)
+	{
+		if (arr[i]<min)
+		min = arr[i];
+	}
+		{
+		System.out.println("Minimum number in array is "+ min);
+		}
+	
+	}
+}
+
+2.Write a Java Program to input array of 10 elements & count occurrence of given number.
+
+
+import java.util.Scanner;
+
+class P6Q2
+{
+	public static void occur(int arr[],int s)
+	{
+		int c=0;
+		for(int i = 0; i<arr.length; i++)
+		{
+			if(arr[i]==s)
+			{
+				c=c+1;
+			}
+		}
+		System.out.println("Occurance of "+ s +" in an Array "+c);
+	}
+
+public static void main(String []args)
+{
+	Scanner sc = new Scanner(System.in);
+	System.out.println("Enter How Many Element You Want in Array :");
+	int n = sc.nextInt();
+	System.out.println("Enter the elements in array :");
+	int [] arr = new int[n];
+	for(int i = 0; i<arr.length; i++)
+	{
+		arr[i] = sc.nextInt();
+	}
+	System.out.println("Enter a number to Occur :");
+	int s = sc.nextInt();
+	occur(arr,s);
+}
+}
+
+3.Write a program for addition subtraction of any 2 n*m matrix.
+
+
+import java.util.Scanner;
+public class pr6q3 
+{
+	public static void main(String[] args)
+	{
+	Scanner s1=new Scanner(System.in);
+	System.out.print("Enter no.of rows:");
+	int n = s1.nextInt();
+	System.out.print("Enter no.of cols:");
+	int m= s1.nextInt();
+	int [][] arr1=new int[n][m];
+	int [][] arr2 = new int[n][m];
+	int [][] sum= new int[n][m];
+	int [][] sub=new int[n][m];
+	System.out.println("\nEnter element of Matrix-1:");
+	for(int i=0;i<arr1.length; i++)
+	{
+	for(int j=0;j<arr1.length; j++)
+	{
+	arr1[i][j]=s1.nextInt();
+	}
+	}
+	System.out.println("Enter element of Matrix-2:");
+	for(int i=0;i<arr2.length; i++)
+	{
+	for(int j=0;j<arr2.length; j++)
+	{
+	arr2[i][j]=s1.nextInt();
+	}
+	}
+	System.out.println("Addition of Matrix:");
+	for(int i=0;i<sum.length;i++)
+	{
+	for(int j=0;j<sum.length; j++)
+	{
+	sum[i][j]=arr1[i][j]+arr2[i][j];
+	}
+	}
+	for(int i=0;i<sum.length;i++)
+	{
+	for(int j=0;j<sum.length;j++)
+	{
+	System.out.println(sum[i][j]);
+	}
+	}
+	System.out.println("Subtraction of Matrix:");
+	for(int i=0;i<sub.length;i++)
+	{
+	for(int j=0;j<sub.length; j++)
+	{
+	sub[i][j]=arr1[i][j]-arr2[i][j];
+	}
+	}
+	for(int i=0;i<sub.length;i++)
+	{
+	for(int j=0;j<sub.length;j++)
+	{
+	System.out.println(sub[i][j]);
+	}
+	}
+	}
+}
+
+4.Write a program to input array of 10 elements & search given number & point its position.
+
+import java.util.Scanner;
+class P6Q4
+{
+public static void main(String []args)
+{
+	Scanner sc = new Scanner(System.in);
+	System.out.println("Enter How Many Element You Want in Array :");
+	int n = sc.nextInt();
+	System.out.println("Enter the elements in array :");
+	int [] arr = new int[n];
+	for(int i = 0; i<arr.length; i++)
+	{
+		arr[i] = sc.nextInt();
+	}
+	System.out.println("Enter element to search :");
+	int s = sc.nextInt();
+	for(int i = 0; i<arr.length; i++)
+	{
+		if(arr[i]==s)
+		{
+		System.out.println("Postition of number is :"+(i+1));
+		}
+	}
+}
+}
+
+				------------------PRACTICAL 7 ----------------
+
+1.Write a Program To Create an array list Of 10 Elements (100,”SYCS”,98.96,153,”MCC”,100.53,40700,”GAURAV”,573.88,”O”) .
+And  demonstrate all the following methods :
+i.Void add ()
+ii.Boolean add ()
+iii.Clear ()
+iv.Contains ()
+v.Size ()
+vi.Remove ()
+vii.Get ()
+
+import java.util.*;
+public class P7Q1
+{
+	public static void main(String []args)
+	{
+		ArrayList Arr1 = new ArrayList();
+		Arr1.add(100);
+		Arr1.add("SYCS");
+		Arr1.add(98.96);
+		Arr1.add(153);
+		Arr1.add("MCC");
+		Arr1.add(100.53);
+		Arr1.add(40700);
+		Arr1.add("GAURAV");
+		Arr1.add(573.88);
+		Arr1.add("O");
+
+	for(Object obj:Arr1)
+	{
+	//Printing Elements in Array
+		System.out.println("Element in Array is "+obj);
+	}
+	{
+//Checking Size of Arry
+	System.out.println("Size of An Array is "+Arr1.size());
+	}
+	{
+//Get Method
+	System.out.println("Element At 4th Index "+Arr1.get(4));
+	}
+	{	
+//Contain()
+boolean b1 = Arr1.contains("MCC");
+if(b1)
+System.out.println("Array is Contain The Element");
+else
+System.out.println("Array is Not Contain The Element");
+	}
+	{
+//Remove()
+System.out.println("Remove The Element "+Arr1.remove("MCC"));
+System.out.println("Remove The Element "+Arr1.remove(3));
+	}
+}
+}
+
+
+2.Write a program in java to create an array list of 10 integers.
+
+import java.util.*;
+public class P7Q2
+{
+	public static void main(String []args)
+	{
+		ArrayList<Integer> Arr2 = new ArrayList<Integer>();
+		Arr2.add(100);
+		Arr2.add(200);
+		Arr2.add(300);
+		Arr2.add(400);
+		Arr2.add(500);
+		Arr2.add(600);
+		Arr2.add(700);
+		Arr2.add(800);
+		Arr2.add(900);
+		Arr2.add(1000);
+//for(Object obj:Arr2)
+{
+	//Printing Elements in Array
+	System.out.println("Element in Array is "+Arr2);
+}
+	}
+}
+
+
+3.Write a program to create array list of students (Roll number , Name, Marks(out of 100) )
+
+
+import java.util.*;
+class student
+{
+	int RollNo;
+	String Name;
+	int Marks;
+
+	public student(int rn, String n, int m)
+	{
+		RollNo = rn;
+		Name = n;
+		Marks = m;
+	}
+
+	public String toString()
+	{
+		return Name + "\t" + RollNo + "\t" + Marks;
+	}
+}
+public class P7Q3
+{
+	public static void main(String []args)
+	{
+		ArrayList<student> list1 = new ArrayList<student>();
+		student s1 = new student(101,"Yug",90);
+		list1.add(s1);
+		list1.add(new student(102,"Sahil",80));
+		System.out.println("Elements in Array is "+list1);
+	}
+}
+
+	
+
+			------------------PRACTICAL 8 -------------
+
+Q.1) Write a program to create vector of 10 elements
+(100,"SYCS",98.96,153,"MCC",100.53,40700,"GAURAV",573.88,"O")
+
+
+import java.util.*;
+public class P8Q1
+{
+	public static void main(String []args)
+	{
+		Vector Ver1 = new Vector();
+		Ver1.add(100);
+		Ver1.add("SYCS");
+		Ver1.add(98.96);
+		Ver1.add(153);
+		Ver1.add("MCC");
+		Ver1.add(100.53);
+		Ver1.add(40700);
+		Ver1.add("GAURAV");
+		Ver1.add(573.88);
+		Ver1.add("O");
+
+	for(Object obj:Ver1)
+	{
+	//Printing Elements in Vector
+		System.out.println("Element in Vector is "+obj);
+	}
+	}
+}
+
+
+Q.1) Write a program to create  stack of 10 elements
+(100,"SYCS",98.96,153,"MCC",100.53,40700,"GAURAV",573.88,"O")
+
+import java.util.*;
+public class P8Q2
+{
+	public static void main(String []args)
+	{
+		Stack St1 = new Stack();
+		St1.add(100);
+		St1.add("SYCS");
+		St1.add(98.96);
+		St1.add(153);
+		St1.add("MCC");
+		St1.add(100.53);
+		St1.add(40700);
+		St1.add("GAURAV");
+		St1.add(573.88);
+		St1.add("O");
+
+	for(Object obj:St1)
+	{
+		System.out.println("Element in Stack is "+obj);
+	}
+	}
+}
+
+
+Q.3) Demonstrate all the legacy methods of vector
+(100,"SYCS",98.96,153,"MCC",100.53,40700,"GAURAV",573.88,"O")
+
+
+import java.util.*;
+public class P8Q3
+{
+	public static void main(String []args)
+	{
+		Vector Vec1 = new Vector();
+		Vec1.add(100);
+		Vec1.add("SYCS");
+		Vec1.add(98.96);
+		Vec1.add(153);
+		Vec1.add("MCC");
+		Vec1.add(100.53);
+		Vec1.add(40700);
+		Vec1.add("GAURAV");
+		Vec1.add(573.88);
+		Vec1.add("O");
+
+	for(Object obj:Vec1)
+	{
+	//Printing Elements in Vector
+		System.out.println("Element in Vector is "+obj);
+	}
+	{
+//Checking Size of Arry
+	System.out.println("Size of An Vector is "+Vec1.size());
+	}
+	{
+//Get Method
+	System.out.println("Element At 4th Index "+Vec1.get(4));
+	}
+	{	
+//Contain()
+boolean b1 = Vec1.contains("MCC");
+if(b1)
+System.out.println("Vector is Contain The Element");
+else
+System.out.println("Vector is Not Contain The Element");
+	}
+	{
+//Remove()
+System.out.println("Remove The Element "+Vec1.remove("MCC"));
+System.out.println("Remove The Element "+Vec1.remove(3));
+	}
+}
+}
+
+
+Q.4) Demonstrate legacy method from stack class
+(100,"SYCS",98.96,153,"MCC",100.53,40700,"GAURAV",573.88,"O")
+
+import java.util.*;
+public class P8Q4
+{
+	public static void main(String []args)
+	{
+		Stack St1 = new Stack();
+		St1.add(100);
+		St1.add("SYCS");
+		St1.add(98.96);
+		St1.add(153);
+		St1.add("MCC");
+		St1.add(100.53);
+		St1.add(40700);
+		St1.add("GAURAV");
+		St1.add(573.88);
+		St1.add("O");
+
+	for(Object obj:St1)
+	{
+		//Printing Elements in Stack
+		System.out.println("Element in Stack is "+obj);
+	}
+	{
+		//Checking the stack is empty or not 
+		System.out.println("Stack is Empty or Not "+St1.empty());
+	}
+	{
+		System.out.println("Search An Element "+St1.search("MCC"));
+		//Remove()
+		System.out.println("Remove The Element "+St1.pop());
+	}
+	}
+}
+
+
+				-------------------PRACTICAL 9 -----------------
+
+Q1) Write a program to define a user defined package Mypack in which you will write a class Balance. The Balance will have data members as String Name, Double Balance. Write a constructor to initialize the member. Write a function to display Name and Balance. Now import this package in your class. 
+
+Package Create:
+
+package packages;
+public class balance
+{
+String name;
+double balance;
+public Balance(String n,double b)
+{
+name=n;
+balance=b;
+}
+public void display()
+{
+System.out.println("name:"+name);
+System.out.println("Balance:"+balance);
+}
+}
+
+Main Programm:
+
+import packages.balance
+public class pr9q1
+{
+public static void main(String[]args)
+{
+Balance b1=new Balance("abc",10000);
+b1.display();
+}
+}
+
+
+Q2) Create a package Animals. In package Animals create interface Animal with suitable behaviors (move, eat). Define two classes Dog and Cat that implement Animals interface. Now import this package in your class
+
+Package create:
+1)package Animals;
+interface animal
+{
+void move();
+void eat();
+}
+public class dog implements animals
+{
+public void move()
+{
+System.out.println("cat is moving");
+}
+public void eat()
+System.out.println("dog is eating");
+}
+}
+
+2)package Animals;
+interface animal
+{
+void move();
+void eat();
+}
+public class cat implements animal
+{
+public void move()
+{
+System.out.println("cat is moving");
+public void eat()
+{
+System.out.println("cat is eating");
+}
+}
+
+Main Program:
+import Animals.*;
+public class animals demo
+{
+public static void main(String[]args)
+{
+cat c1=new cat();
+dog d1=new dog();
+c1.move();
+c1.eat();
+d1.move();
+d1.eat();
+}
+}
+
+
+
+
+
+Q3) Define a package "Diagram" which contain the following:
+
+Define an interface Shape containing function area. Define two classes Triangle and Rectangle that implement Shape interface with proper code for calculation of area. Also define a class to test the above and call the funtion area using variable of Shape.
+
+Package Create:
+
+1) package shape;
+interface shapes
+{
+void area();
+}
+public class tri implements shapes
+{
+int l,b;
+public tri(int l,int b)
+{
+this.l=l;
+this.b=l;
+}
+public void area()
+{
+System.out.println("area of triangle = " +0.5*(l*b));
+}
+}
+
+2)package shape;
+interface shapes
+{
+void area();
+}
+public class rec implements shapes
+{
+int l,b;
+public rec(intl,intb)
+{
+this.l=l;
+this.b=b;
+}
+public void area()
+{
+System.out.println("area of rectangle:" +(l*b));
+}
+}
+
+Main Program:
+
+import  shape.*;
+public class shapedemo
+{
+public static void main(String[]args)
+{
+tri t1=new tri(20,30);
+rec r1=new rec(10,50);
+t1.area();
+r1.area();
+}
+}
+
+			---------------------------PRACTICAL 10 ---------------------
+
+1.Define an exception NoMatchFound that is thrown when a string is not equal to SYBSC. Write a program that uses this exception
+
+
+import java.util.*;
+
+class NoMatchFound extends Exception
+{
+	public NoMatchFound(String msg)
+	{
+		super(msg);
+	}
+}
+
+public class Exception_prq1
+{
+	public static void main(String[] args)
+	{
+		Scanner scan = new Scanner(System.in);
+
+		try
+		{
+			String className;
+			System.out.print("\n\t Enter your class name :");
+			className = scan.next();
+
+			if(className.equals("SYBSC"))
+			{
+				System.out.println("\n\t Class Name = " + className);
+			}
+			else
+			{
+				throw new NoMatchFound("Please Enter valid class Name");
+			}
+		}
+		catch(NoMatchFound e)
+		{
+			System.out.println("\n\t Error = " + e.getMessage());
+		}
+		catch(InputMismatchException e)
+		{
+			System.out.println("\n\t Error = " + e);
+		}
+	}
+}
+
+
+
+2.Write a java program which throws an exception whenever user enters a string of five characters
+
+import java.util.*;
+
+class LengthMismatch extends Exception
+{
+	public LengthMismatch(String msg)
+	{
+		super(msg);
+	}
+}
+
+public class Exception_prq2
+{
+	public static void main(String[] args)
+	{
+		Scanner scan = new Scanner(System.in);
+
+		try
+		{
+			String str1;
+			System.out.print("\n\t Enter your class name :");
+			str1 = scan.next();
+
+			if(str1.length() ==5)
+			{
+				throw new LengthMismatch("Please Enter valid class Name");
+			}
+			else
+			{
+				System.out.println("\n\t Strin is = " + str1);
+			}
+		}
+		
+		catch(LengthMismatch e)
+		{
+			System.out.println("\n\t Error = " + e);
+		}
+	}
+}
+
+
+
+3.Write a program to define an exception MarksOutOfBounds. In this program create a class called Student(name, roll no. and marks). If the marks are greater than 100, it must create an exception called MarksOutOfBounds Exception and throw it.
+
+
+import java.util.*;
+
+class MarksOutOfBound extends Exception
+{
+	public MarksOutOfBound(String msg)
+	{
+		super(msg);
+	}
+}
+class Student
+{  String name;
+   int rollNo,m1,m2,m3;
+	public Student(String n,int rn,int m1,int m2, int m3)
+	{
+		name = n;
+		rollNo = rn;
+		this.m1 = m1;
+		this.m2 = m2;
+		this.m3 = m3;
+	}
+	public void show()
+	{
+		System.out.println( " Name :" +name);
+		System.out.println("roll number :"+rollNo);
+		System.out.println("Marks in subject 1:" +m1);
+		System.out.println("Marks in subject 2:" +m2);
+		System.out.println("Marks in subject 3:" +m3);
+		
+	}
+
+
+}
+
+public class Exception_prq3
+{
+	public static void main(String[] args)
+	{
+		Scanner scan = new Scanner(System.in);
+
+		try
+		{
+			String Name;
+			int rn,m1,m2,m3;
+			System.out.print("\n\t Enter your  name :");
+			Name = scan.next();
+			System.out.print("\n\t Enter your  roll no. :");
+			rn = scan.nextInt();
+			System.out.print("\n\t Enter your  marks in 1st subject :");
+			m1 = scan.nextInt(); 
+			System.out.print("\n\t Enter your  marks in 2nd subject :");
+			m2 = scan.nextInt(); 
+			System.out.print("\n\t Enter your  marks in 3rd subject :");
+			m3 = scan.nextInt(); 
+			
+			if(m1<=100 && m2 <=100 && m3 <=100 )
+			{
+			  Student st1 = new Student(Name,rn,m1,m2,m3);
+				st1.show();	
+			}
+			else
+			{
+				throw new MarksOutOfBound("Please Enter valid marks");
+			}
+		}
+		catch(MarksOutOfBound e)
+		{
+			System.out.println("\n\t Error = " + e.getMessage());
+		}
+		
+	}
+}
+
+
+
+4.Write a program to create custom exception for bank that contains fields account no. and balance, throw an exception for the following conditions:
+i)If withdrawing amount is greater than balance amount. 
+ii)If balance becomes less than 500 after withdrawing amount
+
+
+import java.util.*;
+
+class MinimumBalance extends Exception
+{
+	public MinimumBalance(String msg)
+	{
+		super(msg);
+	}
+}
+class InsufficientBalance extends Exception
+{
+	public InsufficientBalance(String msg)
+	{
+		super(msg);
+	}
+}
+class Account
+{  String name;
+   double iniBal;
+	public Account(String n,double ib)
+	{
+		name = n;
+		iniBal = ib;
+	}
+	public void show()
+	{
+		System.out.println( " Name :" +name);
+		System.out.println("Balance :"+iniBal);
+	}
+}
+public class Exception_prq4
+{
+	public static void main(String[] args)
+	{
+		Scanner scan = new Scanner(System.in);
+
+		try
+		{
+			String Name;
+			double bal,wd;
+		System.out.print("\n\t Enter your  name :");
+			Name = scan.next();
+		System.out.print("\n\t Enter your  balance :");
+			bal = scan.nextInt();
+			if(bal > 500 )
+			{
+		System.out.print("\n\tEnter your withdraw ammount :");
+			wd = scan.nextInt();
+			if(wd < bal)
+			{
+				bal =bal-wd;	
+			  Account ac1 = new Account(Name,bal)
+				ac1.show();	
+			}
+			else
+			{
+	throw new InsufficientBalance("you dont have sufficient balance to withdraw");
+			}
+		}
+			else
+			{
+	throw new MinimumBalance("you dont have minimum balance  in your account");
+			}
+		}
+		catch(MinimumBalance e)
+		{
+			System.out.println("\n\t Error = " + e.getMessage());
+		}
+		catch(InsufficientBalance e)
+		{
+			System.out.println("\n\t Error = " + e.getMessage());
+		}
+		
+	}
+}
+
+
+			-----------------------PRACTICAL 11 [ SWING ] ----------------------
+
+Q1) Design a java application using swing controls to convert temperature from celcius to fahrenhert.
+
+private void btn_conActionPerformed(java.awt.event.ActionEvent evt) {                                        
+         double c=Double.parseDouble(txt_cel.getText());
+         double f=c*1.8+32;
+         txt_fah.setText(f+" farehnhiet");
+    }                          
+
+Q2) Write a java program to design a calculator using swing controls.
+
+private void btn_addActionPerformed(java.awt.event.ActionEvent evt) {                                        
+          
+            int n1=Integer.parseInt(txt_num1.getText());
+            int n2=Integer.parseInt(txt_num2.getText());
+            int n3=n1+n2;
+            txt_rst.setText("Addition : "+n3);
+    }                                       
+
+    private void btn_subActionPerformed(java.awt.event.ActionEvent evt) {                                        
+            int n1=Integer.parseInt(txt_num1.getText());
+            int n2=Integer.parseInt(txt_num2.getText());
+            int n3=n1-n2;
+            txt_rst.setText("Subtraction : "+n3); 
+    }                                       
+
+    private void btn_mulActionPerformed(java.awt.event.ActionEvent evt) {                                        
+            int n1=Integer.parseInt(txt_num1.getText());
+            int n2=Integer.parseInt(txt_num2.getText());
+            int n3=n1*n2;
+            txt_rst.setText("Multiplication : "+n3);
+    }                                       
+
+    private void btn_divActionPerformed(java.awt.event.ActionEvent evt) {                                        
+            int n1=Integer.parseInt(txt_num1.getText());
+            int n2=Integer.parseInt(txt_num2.getText());
+            int n3=n1/n2;
+            txt_rst.setText("Division : "+n3);
+    }                                       
+
+Q3) Accept Principal amount,rate of Integer on of years user, it should contain calculate simple interest button which return. Simple Interest also find amount button which will find amount by adding amount and interest.
+
+private void btn_calActionPerformed(java.awt.event.ActionEvent evt) {                                        
+            double A=Double.parseDouble(txt_amt.getText());
+            int R=Integer.parseInt(txt_roi.getText());
+            int Y=Integer.parseInt(txt_yr.getText());
+            double s=(A*R*Y)/100;
+            double f=A+s;
+            txt_si.setText("Simple Interest :"+ s);
+            txt_fa.setText("Final Amount :"+f);
+    }                                       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
