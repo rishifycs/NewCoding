@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Toggle Element</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Toggle Element</h1>
+    <button id="toggleButton">Toggle Element</button>
+    <div id="targetElement" style="display: none;">This element can be toggled.</div>
+
+    <script>
+        $(document).ready(function() {
+            $("#toggleButton").click(function() {
+                $("#targetElement").toggle();
+            });
+        });
+    </script>
+</body>
+</html>
+
