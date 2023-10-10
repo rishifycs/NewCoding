@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mouse Enter and Leave Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Mouse Enter and Leave Example</h1>
+    <div id="targetElement">Hover over me</div>
+
+    <script>
+        $(document).ready(function() {
+            $("#targetElement").mouseenter(function() {
+                $(this).css("background-color", "lightblue");
+            });
+
+            $("#targetElement").mouseleave(function() {
+                $(this).css("background-color", "white");
+            });
+        });
+    </script>
+</body>
+</html>
