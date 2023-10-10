@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Click Events</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Click Events</h1>
+    <button id="clickButton">Click Me</button>
+
+    <script>
+        $(document).ready(function() {
+            $("#clickButton").click(function() {
+                alert("Single Click: Button was clicked once.");
+            });
+
+            $("#clickButton").dblclick(function() {
+                alert("Double Click: Button was double-clicked.");
+            });
+        });
+    </script>
+</body>
+</html>
